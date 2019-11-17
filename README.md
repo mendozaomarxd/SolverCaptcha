@@ -1,0 +1,2 @@
+# SolverCaptcha
+FreeBitcoin Imacros
