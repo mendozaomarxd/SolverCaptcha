@@ -29,9 +29,9 @@ WAIT SECONDS=1
 TAG POS=1 TYPE=* ATTR=TXT:* EXTRACT=TXT
 SET captid EVAL("var s=\"{{!EXTRACT}}\"; s.split(' ')[0].split('|')[1]")
 SET !EXTRACT NULL
-'Get the answer'
+'Get the answer
 URL GOTO= https://2captcha.com/res.php?key={{api_key}}&action=get&id={{captid}}
-'Wait for the answer'
+'Wait for the answer
 WAIT SECONDS=120
 REFRESH
 TAG POS=1 TYPE=* ATTR=TXT:* EXTRACT=TXT
